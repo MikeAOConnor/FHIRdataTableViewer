@@ -53,7 +53,8 @@ class PatientTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // load data
-        loadPatientDate()
+        loadPatientData()
+        //print("The count in viewDidLoad \(self.patients.count)")
         
     }
     
@@ -62,10 +63,11 @@ class PatientTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //print("The count in numberofrowsinsection \(self.patients.count)")
         return patients.count
     }
     
-    func loadPatientDate() {
+    func loadPatientData() {
         
         // Create a configuration
         //let configuration = URLSessionConfiguration.ephemeral
@@ -119,11 +121,12 @@ class PatientTableViewController: UITableViewController {
             //        print(result)
             //    }
             //    PlaygroundPage.current.finishExecution()
+            //print("The count out of Do \(self.patients.count)")
             
         }
         
         task.resume()
-        
+        //print("The count after task.resume \(self.patients.count)")
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

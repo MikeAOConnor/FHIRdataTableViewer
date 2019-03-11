@@ -15,6 +15,7 @@
 		8F9141A62219C3390064EA74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F9141A52219C3390064EA74 /* Assets.xcassets */; };
 		8F9141A92219C3390064EA74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F9141A72219C3390064EA74 /* LaunchScreen.storyboard */; };
 		8F9141B12219CBE80064EA74 /* PatientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9141B02219CBE80064EA74 /* PatientTableViewController.swift */; };
+		8FA138A92232F526009F37F7 /* ObservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA138A82232F526009F37F7 /* ObservationTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		8F9141A82219C3390064EA74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F9141AA2219C3390064EA74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F9141B02219CBE80064EA74 /* PatientTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientTableViewController.swift; sourceTree = "<group>"; };
+		8FA138A82232F526009F37F7 /* ObservationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				8F91419E2219C3370064EA74 /* AppDelegate.swift */,
 				8F9141A02219C3370064EA74 /* ViewController.swift */,
 				8F9141A22219C3370064EA74 /* Main.storyboard */,
+				8FA138A82232F526009F37F7 /* ObservationTableViewCell.swift */,
 				8F753F872224D71E00B676BD /* ObservationViewController.swift */,
 				8F9141B02219CBE80064EA74 /* PatientTableViewController.swift */,
 				8F9141A52219C3390064EA74 /* Assets.xcassets */,
@@ -148,6 +151,7 @@
 				8F489891221DF57800C13BBF /* PatientCellTableViewCell.swift in Sources */,
 				8F9141B12219CBE80064EA74 /* PatientTableViewController.swift in Sources */,
 				8F753F882224D71E00B676BD /* ObservationViewController.swift in Sources */,
+				8FA138A92232F526009F37F7 /* ObservationTableViewCell.swift in Sources */,
 				8F91419F2219C3370064EA74 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
