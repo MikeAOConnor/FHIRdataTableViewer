@@ -41,7 +41,7 @@ struct ObservationJSON: Codable {
             let resourceType: String
             let id: String
             let status: String
-            let category: [CatCodeStruct]
+            let category: [CatCodeStruct]?
             let code: CatCodeStruct
             let effectiveDateTime: String
             let valueCodeableConcept: CatCodeStruct?
@@ -99,7 +99,7 @@ class ObservationViewController: UIViewController {
 
         //observations =
         loadObservationData()
-        print("The count in viewDidLoad \(self.observations.count)")
+       // print("The count in viewDidLoad \(self.observations.count)")
        //patientIDLabel.text = patientID
         
     }
@@ -113,7 +113,7 @@ class ObservationViewController: UIViewController {
         let baseURL = "http://demo.oridashi.com.au:8297/Observation"
         let sssnFullURL = baseURL + filterConditions
         
-        print(sssnFullURL)
+        //print(sssnFullURL)
         
         // Create a configuration
         //let configuration = URLSessionConfiguration.ephemeral
@@ -152,7 +152,7 @@ class ObservationViewController: UIViewController {
                     let status = entry.resource.status
                     
                     //            let cat_code = entry.resource.category.coding[0].code
-                    let cat_code = entry.resource.category[0].coding[0].code
+                    let cat_code = entry.resource.category?[0].coding[0].code
                     //            let cat_disp = entry.resource.category.coding[0].display
                     //            let cat_syst = entry.resource.category.coding[0].system
                     //            let code_code = entry.resource.code.coding[0].code
@@ -199,14 +199,14 @@ class ObservationViewController: UIViewController {
                         comp2unit = (entry.resource.component?[1].valueQuantity.unit)!
                     }
                     
-                    let observation = Observation(catCode: cat_code, codeDisplay: code_disp, codeCode: code_code, effctvDate: effDateTime, valQuantVal: (valQuantVal ?? 0), valQuanUnit: (valQuantUnit ?? ""), valCodeableDisp: valCode_disp ?? "", compo1Disp: comp1disp ?? "", compo1Value: comp1val ?? 0, compo1Unit: comp1unit ?? "", compo2Disp: comp2disp, compo2Value: comp2val, compo2Unit: comp2unit)
+                    let observation = Observation(catCode: cat_code ?? "", codeDisplay: code_disp, codeCode: code_code, effctvDate: effDateTime, valQuantVal: (valQuantVal ?? 0), valQuanUnit: (valQuantUnit ?? ""), valCodeableDisp: valCode_disp ?? "", compo1Disp: comp1disp ?? "", compo1Value: comp1val ?? 0, compo1Unit: comp1unit ?? "", compo2Disp: comp2disp, compo2Value: comp2val, compo2Unit: comp2unit)
                     
                     self.observations.append(observation)
 //                    print(self.observations.count)
                     
                     //tempObservations.append(observation)
                     
-                    print("status: \(status), cat_code: \(cat_code), code_disp: \(code_disp), code_code: \(code_code), code_syst: \(code_system),  effectiveDtTm: \(effDateTime), ValQuantVal: \(valQuantVal ??  0), ValQuantUnit: \(valQuantUnit ?? ""), valCodeableDisp: \(valCode_disp ?? ""), comp1disp: \(comp1disp ?? ""), comp1val: \(comp1val ?? 0), comp1Unit: \(comp1unit ?? ""), comp2disp: \(comp2disp), comp2val: \(comp2val), comp2Unit: \(comp2unit)")
+//                    print("status: \(status), cat_code: \(cat_code ?? ""), code_disp: \(code_disp), code_code: \(code_code), code_syst: \(code_system),  effectiveDtTm: \(effDateTime), ValQuantVal: \(valQuantVal ??  0), ValQuantUnit: \(valQuantUnit ?? ""), valCodeableDisp: \(valCode_disp ?? ""), comp1disp: \(comp1disp ?? ""), comp1val: \(comp1val ?? 0), comp1Unit: \(comp1unit ?? ""), comp2disp: \(comp2disp), comp2val: \(comp2val), comp2Unit: \(comp2unit)")
 
 //                    csvString = csvString.appending("\(cat_code), \(code_disp), \(code_code), \(code_system), \(effDateTime), \(valQuantVal ?? 0), \(valQuantUnit ?? ""), \(valCode_disp ?? ""), \(comp1disp ?? ""), \(comp1val ?? 0), \(comp1unit ?? ""), \(comp2disp), \(comp2val), \(comp2unit)\n")
                     
