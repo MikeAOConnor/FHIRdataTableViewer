@@ -90,7 +90,8 @@ class ObservationViewController: UIViewController {
    // @IBOutlet weak var patientIDLabel: UILabel!
     
     var patientID: String?
-    
+    var sssnFullURL: String?
+    var obsvCount: Int = 0
     
     
 
@@ -102,6 +103,8 @@ class ObservationViewController: UIViewController {
        // print("The count in viewDidLoad \(self.observations.count)")
        //patientIDLabel.text = patientID
         
+        //print("The count in viewDidLoad \(self.obsvCount)") // gets set back to 0 here
+        
     }
     
     func loadObservationData() {
@@ -111,7 +114,7 @@ class ObservationViewController: UIViewController {
         let filterConditions = "?subject=Patient/" + patientID! + "&_format=json"
         
         let baseURL = "http://demo.oridashi.com.au:8297/Observation"
-        let sssnFullURL = baseURL + filterConditions
+        sssnFullURL = baseURL + filterConditions
         
         //print(sssnFullURL)
         
@@ -127,7 +130,7 @@ class ObservationViewController: UIViewController {
         
         
         // Setup the url
-        let url = URL(string: sssnFullURL)!
+        let url = URL(string: sssnFullURL!)!
         
 //        var csvString = "\("Cat Code"), \("Code Disp"), \("Code Code"), \("Code Syst"), \("Effective Date"), \("ValQuantVal"), \("ValQuantUnit"), \("ValCodeableDisp"), \("Comp1Disp"), \("Comp1Val"), \("Comp1Unit"), \("Comp2Disp"), \("Comp2Val"), \("Comp2Unit")\n"
         
@@ -145,6 +148,7 @@ class ObservationViewController: UIViewController {
             do {
                 let decoder = JSONDecoder()
                 let media = try decoder.decode(ObservationJSON.self, from: data)
+                //print("The count in Do for media.entry \(media.entry.count)") 
                 for entry in media.entry {
                     let id = entry.resource.id
                     
@@ -217,12 +221,17 @@ class ObservationViewController: UIViewController {
                 let queue = OperationQueue.main
                 queue.addOperation {
                     self.tableView.reloadData()
+                    //self.obsvCount = self.observations.count
                 }
             } catch {
                 print("Error info: \(error)")
                 //PlaygroundPage.current.finishExecution()
             }
-            //print(tempObservations.count)  //correct here out of Do
+            
+            self.obsvCount = self.observations.count  // correct here
+            
+            //print("After Do Loop \(self.obsvCount)")
+            //print(self.observations.count)  //correct here out of Do
             // print(csvString)
             
 //            let fileManager = FileManager.default
@@ -244,6 +253,7 @@ class ObservationViewController: UIViewController {
         
         task.resume()
         
+        //print("After task.resume \(self.obsvCount)")
        //print(self.observations.count)
         //print(tempObservations.count)  //incorrect here
         //return tempObservations

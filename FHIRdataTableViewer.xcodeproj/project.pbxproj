@@ -16,7 +16,26 @@
 		8F9141A92219C3390064EA74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F9141A72219C3390064EA74 /* LaunchScreen.storyboard */; };
 		8F9141B12219CBE80064EA74 /* PatientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9141B02219CBE80064EA74 /* PatientTableViewController.swift */; };
 		8FA138A92232F526009F37F7 /* ObservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA138A82232F526009F37F7 /* ObservationTableViewCell.swift */; };
+		8FADB0682249566D00B4C748 /* FHIRdataTableViewerSlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FADB0672249566D00B4C748 /* FHIRdataTableViewerSlowTests.swift */; };
+		8FB03B5F2243EEE500A897E0 /* FHIRdataTableViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB03B5E2243EEE500A897E0 /* FHIRdataTableViewerTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8FADB06A2249566D00B4C748 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F9141932219C3370064EA74 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F91419A2219C3370064EA74;
+			remoteInfo = FHIRdataTableViewer;
+		};
+		8FB03B612243EEE500A897E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F9141932219C3370064EA74 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F91419A2219C3370064EA74;
+			remoteInfo = FHIRdataTableViewer;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8F489890221DF57800C13BBF /* PatientCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientCellTableViewCell.swift; sourceTree = "<group>"; };
@@ -30,10 +49,30 @@
 		8F9141AA2219C3390064EA74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F9141B02219CBE80064EA74 /* PatientTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientTableViewController.swift; sourceTree = "<group>"; };
 		8FA138A82232F526009F37F7 /* ObservationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationTableViewCell.swift; sourceTree = "<group>"; };
+		8FADB0652249566D00B4C748 /* FHIRdataTableViewerSlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FHIRdataTableViewerSlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FADB0672249566D00B4C748 /* FHIRdataTableViewerSlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FHIRdataTableViewerSlowTests.swift; sourceTree = "<group>"; };
+		8FADB0692249566D00B4C748 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FB03B5C2243EEE500A897E0 /* FHIRdataTableViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FHIRdataTableViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FB03B5E2243EEE500A897E0 /* FHIRdataTableViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FHIRdataTableViewerTests.swift; sourceTree = "<group>"; };
+		8FB03B602243EEE500A897E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8F9141982219C3370064EA74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FADB0622249566D00B4C748 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FB03B592243EEE500A897E0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,6 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				8F91419D2219C3370064EA74 /* FHIRdataTableViewer */,
+				8FB03B5D2243EEE500A897E0 /* FHIRdataTableViewerTests */,
+				8FADB0662249566D00B4C748 /* FHIRdataTableViewerSlowTests */,
 				8F91419C2219C3370064EA74 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				8F91419B2219C3370064EA74 /* FHIRdataTableViewer.app */,
+				8FB03B5C2243EEE500A897E0 /* FHIRdataTableViewerTests.xctest */,
+				8FADB0652249566D00B4C748 /* FHIRdataTableViewerSlowTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,6 +117,24 @@
 				8F489890221DF57800C13BBF /* PatientCellTableViewCell.swift */,
 			);
 			path = FHIRdataTableViewer;
+			sourceTree = "<group>";
+		};
+		8FADB0662249566D00B4C748 /* FHIRdataTableViewerSlowTests */ = {
+			isa = PBXGroup;
+			children = (
+				8FADB0672249566D00B4C748 /* FHIRdataTableViewerSlowTests.swift */,
+				8FADB0692249566D00B4C748 /* Info.plist */,
+			);
+			path = FHIRdataTableViewerSlowTests;
+			sourceTree = "<group>";
+		};
+		8FB03B5D2243EEE500A897E0 /* FHIRdataTableViewerTests */ = {
+			isa = PBXGroup;
+			children = (
+				8FB03B5E2243EEE500A897E0 /* FHIRdataTableViewerTests.swift */,
+				8FB03B602243EEE500A897E0 /* Info.plist */,
+			);
+			path = FHIRdataTableViewerTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +157,42 @@
 			productReference = 8F91419B2219C3370064EA74 /* FHIRdataTableViewer.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8FADB0642249566D00B4C748 /* FHIRdataTableViewerSlowTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FADB06E2249566D00B4C748 /* Build configuration list for PBXNativeTarget "FHIRdataTableViewerSlowTests" */;
+			buildPhases = (
+				8FADB0612249566D00B4C748 /* Sources */,
+				8FADB0622249566D00B4C748 /* Frameworks */,
+				8FADB0632249566D00B4C748 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8FADB06B2249566D00B4C748 /* PBXTargetDependency */,
+			);
+			name = FHIRdataTableViewerSlowTests;
+			productName = FHIRdataTableViewerSlowTests;
+			productReference = 8FADB0652249566D00B4C748 /* FHIRdataTableViewerSlowTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8FB03B5B2243EEE500A897E0 /* FHIRdataTableViewerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FB03B652243EEE500A897E0 /* Build configuration list for PBXNativeTarget "FHIRdataTableViewerTests" */;
+			buildPhases = (
+				8FB03B582243EEE500A897E0 /* Sources */,
+				8FB03B592243EEE500A897E0 /* Frameworks */,
+				8FB03B5A2243EEE500A897E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8FB03B622243EEE500A897E0 /* PBXTargetDependency */,
+			);
+			name = FHIRdataTableViewerTests;
+			productName = FHIRdataTableViewerTests;
+			productReference = 8FB03B5C2243EEE500A897E0 /* FHIRdataTableViewerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -108,6 +205,14 @@
 				TargetAttributes = {
 					8F91419A2219C3370064EA74 = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					8FADB0642249566D00B4C748 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 8F91419A2219C3370064EA74;
+					};
+					8FB03B5B2243EEE500A897E0 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 8F91419A2219C3370064EA74;
 					};
 				};
 			};
@@ -125,6 +230,8 @@
 			projectRoot = "";
 			targets = (
 				8F91419A2219C3370064EA74 /* FHIRdataTableViewer */,
+				8FB03B5B2243EEE500A897E0 /* FHIRdataTableViewerTests */,
+				8FADB0642249566D00B4C748 /* FHIRdataTableViewerSlowTests */,
 			);
 		};
 /* End PBXProject section */
@@ -137,6 +244,20 @@
 				8F9141A92219C3390064EA74 /* LaunchScreen.storyboard in Resources */,
 				8F9141A62219C3390064EA74 /* Assets.xcassets in Resources */,
 				8F9141A42219C3370064EA74 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FADB0632249566D00B4C748 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FB03B5A2243EEE500A897E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,7 +277,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8FADB0612249566D00B4C748 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FADB0682249566D00B4C748 /* FHIRdataTableViewerSlowTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FB03B582243EEE500A897E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FB03B5F2243EEE500A897E0 /* FHIRdataTableViewerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8FADB06B2249566D00B4C748 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F91419A2219C3370064EA74 /* FHIRdataTableViewer */;
+			targetProxy = 8FADB06A2249566D00B4C748 /* PBXContainerItemProxy */;
+		};
+		8FB03B622243EEE500A897E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F91419A2219C3370064EA74 /* FHIRdataTableViewer */;
+			targetProxy = 8FB03B612243EEE500A897E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8F9141A22219C3370064EA74 /* Main.storyboard */ = {
@@ -330,6 +480,86 @@
 			};
 			name = Release;
 		};
+		8FADB06C2249566D00B4C748 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G2JDSSH8U9;
+				INFOPLIST_FILE = FHIRdataTableViewerSlowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HealthTrackInform.onmicrosoft.FHIRdataTableViewerSlowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FHIRdataTableViewer.app/FHIRdataTableViewer";
+			};
+			name = Debug;
+		};
+		8FADB06D2249566D00B4C748 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G2JDSSH8U9;
+				INFOPLIST_FILE = FHIRdataTableViewerSlowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HealthTrackInform.onmicrosoft.FHIRdataTableViewerSlowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FHIRdataTableViewer.app/FHIRdataTableViewer";
+			};
+			name = Release;
+		};
+		8FB03B632243EEE500A897E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G2JDSSH8U9;
+				INFOPLIST_FILE = FHIRdataTableViewerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HealthTrackInform.onmicrosoft.FHIRdataTableViewerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FHIRdataTableViewer.app/FHIRdataTableViewer";
+			};
+			name = Debug;
+		};
+		8FB03B642243EEE500A897E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G2JDSSH8U9;
+				INFOPLIST_FILE = FHIRdataTableViewerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HealthTrackInform.onmicrosoft.FHIRdataTableViewerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FHIRdataTableViewer.app/FHIRdataTableViewer";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -347,6 +577,24 @@
 			buildConfigurations = (
 				8F9141AE2219C3390064EA74 /* Debug */,
 				8F9141AF2219C3390064EA74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FADB06E2249566D00B4C748 /* Build configuration list for PBXNativeTarget "FHIRdataTableViewerSlowTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FADB06C2249566D00B4C748 /* Debug */,
+				8FADB06D2249566D00B4C748 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FB03B652243EEE500A897E0 /* Build configuration list for PBXNativeTarget "FHIRdataTableViewerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FB03B632243EEE500A897E0 /* Debug */,
+				8FB03B642243EEE500A897E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
