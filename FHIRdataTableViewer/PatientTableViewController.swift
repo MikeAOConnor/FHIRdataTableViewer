@@ -155,14 +155,19 @@ class PatientTableViewController: UITableViewController {
         return cell
     }
     
+    // old segue:  "ObservationSegue"
+    // old let statement in the guard: let observationViewController = segue.destination as? ObservationViewController
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ObservationSegue" {
-            guard let cell = sender as? UITableViewCell, let observationViewController = segue.destination as? ObservationViewController, let indexPath = tableView.indexPath(for: cell) else {
+        if segue.identifier == "TabBarSegue" {
+            guard let cell = sender as? UITableViewCell, let tabBarViewController = segue.destination as? TabBarViewController, let indexPath = tableView.indexPath(for: cell) else {
                 return
             }
             let patientID = patients[indexPath.row].id
-            observationViewController.patientID = patientID
+            tabBarViewController.patientID = patientID
+        } else {
+            print("incorrect segue")
         }
     }
     
