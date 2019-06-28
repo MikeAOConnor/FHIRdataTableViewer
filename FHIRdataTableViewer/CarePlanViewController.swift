@@ -53,7 +53,7 @@ struct CarePlanJSON: Codable {
         let resource: ResourceItem
     }
     
-    let entry: [CarePlanEntry]
+    let entry: [CarePlanEntry]?
 }
 
 struct CarePlan {
@@ -152,7 +152,20 @@ class CarePlanViewController: UIViewController {
                 let decoder = JSONDecoder()
                 let media = try decoder.decode(CarePlanJSON.self, from: data)
                 // for loop  for entry in media.entry
-                for entry in media.entry {
+                if media.entry == nil {
+                    print("no data for member")
+                    // Performing any operation from a background thread on UIView or a subclass is not supported and may result             in unexpected and insidious behavior
+                    let queueForMessage = OperationQueue.main
+                    queueForMessage.addOperation {
+                        let ac = UIAlertController(title: "Patient Data Message", message: "There is no Care Plan Data for this Member.", preferredStyle: .alert)
+                        ac.addAction(UIAlertAction(title: "OK", style: .default))
+                        self.present(ac, animated: true)
+                    }
+                    
+                    return
+                }
+                
+                for entry in media.entry! {
                     
                     let resourceType = entry.resource.resourceType
                     let status = entry.resource.status

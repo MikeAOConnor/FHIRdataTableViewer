@@ -21,6 +21,8 @@
 		8FA138A92232F526009F37F7 /* ObservationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA138A82232F526009F37F7 /* ObservationTableViewCell.swift */; };
 		8FADB0682249566D00B4C748 /* FHIRdataTableViewerSlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FADB0672249566D00B4C748 /* FHIRdataTableViewerSlowTests.swift */; };
 		8FB03B5F2243EEE500A897E0 /* FHIRdataTableViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB03B5E2243EEE500A897E0 /* FHIRdataTableViewerTests.swift */; };
+		8FB1C31822B6875C00986DB1 /* ConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB1C31722B6875C00986DB1 /* ConditionsViewController.swift */; };
+		8FB7C1C922C4DFA00064AAE5 /* ConditionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB7C1C822C4DFA00064AAE5 /* ConditionsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		8FB03B5C2243EEE500A897E0 /* FHIRdataTableViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FHIRdataTableViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FB03B5E2243EEE500A897E0 /* FHIRdataTableViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FHIRdataTableViewerTests.swift; sourceTree = "<group>"; };
 		8FB03B602243EEE500A897E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FB1C31722B6875C00986DB1 /* ConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionsViewController.swift; sourceTree = "<group>"; };
+		8FB7C1C822C4DFA00064AAE5 /* ConditionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +119,12 @@
 				8F9141A02219C3370064EA74 /* ViewController.swift */,
 				8F9141A22219C3370064EA74 /* Main.storyboard */,
 				8F422B1D2263AE17000D5E20 /* CarePlanTableViewCell.swift */,
+				8FB7C1C822C4DFA00064AAE5 /* ConditionsTableViewCell.swift */,
 				8F044B8D2260B4CD00462F1A /* TabBarViewController.swift */,
 				8FA138A82232F526009F37F7 /* ObservationTableViewCell.swift */,
 				8F753F872224D71E00B676BD /* ObservationViewController.swift */,
 				8F3EA6D82262413A00459FFE /* CarePlanViewController.swift */,
+				8FB1C31722B6875C00986DB1 /* ConditionsViewController.swift */,
 				8F9141B02219CBE80064EA74 /* PatientTableViewController.swift */,
 				8F9141A52219C3390064EA74 /* Assets.xcassets */,
 				8F9141A72219C3390064EA74 /* LaunchScreen.storyboard */,
@@ -280,11 +286,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FB1C31822B6875C00986DB1 /* ConditionsViewController.swift in Sources */,
 				8F9141A12219C3370064EA74 /* ViewController.swift in Sources */,
 				8F489891221DF57800C13BBF /* PatientCellTableViewCell.swift in Sources */,
 				8F422B1E2263AE17000D5E20 /* CarePlanTableViewCell.swift in Sources */,
 				8F9141B12219CBE80064EA74 /* PatientTableViewController.swift in Sources */,
 				8F753F882224D71E00B676BD /* ObservationViewController.swift in Sources */,
+				8FB7C1C922C4DFA00064AAE5 /* ConditionsTableViewCell.swift in Sources */,
 				8F3EA6D92262413A00459FFE /* CarePlanViewController.swift in Sources */,
 				8F044B8E2260B4CD00462F1A /* TabBarViewController.swift in Sources */,
 				8FA138A92232F526009F37F7 /* ObservationTableViewCell.swift in Sources */,
