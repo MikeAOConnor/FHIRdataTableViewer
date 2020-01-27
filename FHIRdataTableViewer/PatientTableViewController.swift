@@ -7,38 +7,38 @@
 //
 
 import UIKit
+//import PatientCodableStructs
+//struct PatientJSON: Codable {
+//    struct PatientEntry: Codable {
+//        
+//        struct ResourceItem: Codable {
+//            struct PatientName: Codable {
+//                let family: String?
+//                let given: [String]?
+//            }
+//            
+//            let resourceType: String
+//            let id: String
+//            let name: [PatientName]
+//        }
+//        let fullUrl: String
+//        let resource: ResourceItem
+//        
+//        
+//    }
+//    
+//    let entry: [PatientEntry]
+//    
+//}
+//
+//struct Patient {
+//    let id: String
+//    let given: String
+//    let family: String
+//    let fullName: String
+//}
 
-struct PatientJSON: Codable {
-    struct PatientEntry: Codable {
-        
-        struct ResourceItem: Codable {
-            struct PatientName: Codable {
-                let family: String?
-                let given: [String]?
-            }
-            
-            let resourceType: String
-            let id: String
-            let name: [PatientName]
-        }
-        let fullUrl: String
-        let resource: ResourceItem
-        
-        
-    }
-    
-    let entry: [PatientEntry]
-    
-}
-
-struct Patient {
-    let id: String
-    let given: String
-    let family: String
-    let fullName: String
-}
-
-
+//var pcf:PatientCodableStructs
 
 
 class PatientTableViewController: UITableViewController {
@@ -46,9 +46,11 @@ class PatientTableViewController: UITableViewController {
 //    @IBOutlet weak var label1: UILabel!
 //
 //    @IBOutlet weak var label2: UILabel!
+//    var pcf = PatientCodableStructs()
     
-    
-    var patients: [Patient]  = []
+//    var patients: [Patient]  = []
+    var patients = [Patient]()
+    //var petitions = [Petition]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,7 +85,8 @@ class PatientTableViewController: UITableViewController {
         // Setup the url
         //let url = URL(string: "http://snapp.clinfhir.com:8081/baseDstu3/Patient?_format=json")!
         let url = URL(string: "http://demo.oridashi.com.au:8297/Patient?_format=json")!
-        
+//        let url = URL(string: "https://fhir.careevolution.com/apitest/fhir/Patient?_format=json")!
+//        let url = URL(string: "https://r4.test.pyrohealth.net/fhir/Patient?_format=json")!
         // Create the task
         let task = session.dataTask(with: url) {
             
@@ -102,10 +105,15 @@ class PatientTableViewController: UITableViewController {
                 let media = try decoder.decode(PatientJSON.self, from: data)
                 for entry in media.entry {
                     let id = entry.resource.id
-                    let familyName = entry.resource.name[0].family
-                    let givenName = entry.resource.name[0].given?[0]
-                    let fullName = (givenName ?? "notPresentLast") + " " + (familyName ?? "NotPresentFirst")
-                    let patient = Patient(id: id, given: givenName ?? "NoGvnName", family: familyName ?? "NoFamName", fullName: fullName)
+                    var familyName = "NoFamNameData"
+                    var givenName = "NoGvnNameData"
+                    if entry.resource.name?[0] != nil {
+                        familyName = entry.resource.name![0].family ?? "NoFamNameData"
+                        givenName = entry.resource.name![0].given?[0] ?? "NoGvnNameData"
+                    }
+
+                    let fullName = givenName + " " + familyName
+                    let patient = Patient(id: id, given: givenName, family: familyName, fullName: fullName)
                     self.patients.append(patient)
                     //print("id: \(id), family name: \(familyName), given name: \(givenName)")
                 }

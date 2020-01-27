@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F006F2723CB8F960030EEAF /* PatientStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F006F2623CB8F960030EEAF /* PatientStructs.swift */; };
 		8F044B8E2260B4CD00462F1A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F044B8D2260B4CD00462F1A /* TabBarViewController.swift */; };
+		8F0751B523D4F53B00D59F20 /* ObservationStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0751B423D4F53B00D59F20 /* ObservationStructs.swift */; };
+		8F2F880F23DE2965002F903E /* ConditionStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F880E23DE2965002F903E /* ConditionStructs.swift */; };
+		8F2F881123DE2C70002F903E /* CarePlanStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2F881023DE2C70002F903E /* CarePlanStructs.swift */; };
 		8F3EA6D92262413A00459FFE /* CarePlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3EA6D82262413A00459FFE /* CarePlanViewController.swift */; };
 		8F422B1E2263AE17000D5E20 /* CarePlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F422B1D2263AE17000D5E20 /* CarePlanTableViewCell.swift */; };
 		8F489891221DF57800C13BBF /* PatientCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F489890221DF57800C13BBF /* PatientCellTableViewCell.swift */; };
@@ -43,7 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8F006F2623CB8F960030EEAF /* PatientStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientStructs.swift; sourceTree = "<group>"; };
 		8F044B8D2260B4CD00462F1A /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		8F0751B423D4F53B00D59F20 /* ObservationStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationStructs.swift; sourceTree = "<group>"; };
+		8F2F880E23DE2965002F903E /* ConditionStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionStructs.swift; sourceTree = "<group>"; };
+		8F2F881023DE2C70002F903E /* CarePlanStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarePlanStructs.swift; sourceTree = "<group>"; };
 		8F3EA6D82262413A00459FFE /* CarePlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarePlanViewController.swift; sourceTree = "<group>"; };
 		8F422B1D2263AE17000D5E20 /* CarePlanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarePlanTableViewCell.swift; sourceTree = "<group>"; };
 		8F489890221DF57800C13BBF /* PatientCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientCellTableViewCell.swift; sourceTree = "<group>"; };
@@ -115,6 +123,10 @@
 		8F91419D2219C3370064EA74 /* FHIRdataTableViewer */ = {
 			isa = PBXGroup;
 			children = (
+				8F006F2623CB8F960030EEAF /* PatientStructs.swift */,
+				8F0751B423D4F53B00D59F20 /* ObservationStructs.swift */,
+				8F2F880E23DE2965002F903E /* ConditionStructs.swift */,
+				8F2F881023DE2C70002F903E /* CarePlanStructs.swift */,
 				8F91419E2219C3370064EA74 /* AppDelegate.swift */,
 				8F9141A02219C3370064EA74 /* ViewController.swift */,
 				8F9141A22219C3370064EA74 /* Main.storyboard */,
@@ -126,10 +138,10 @@
 				8F3EA6D82262413A00459FFE /* CarePlanViewController.swift */,
 				8FB1C31722B6875C00986DB1 /* ConditionsViewController.swift */,
 				8F9141B02219CBE80064EA74 /* PatientTableViewController.swift */,
+				8F489890221DF57800C13BBF /* PatientCellTableViewCell.swift */,
 				8F9141A52219C3390064EA74 /* Assets.xcassets */,
 				8F9141A72219C3390064EA74 /* LaunchScreen.storyboard */,
 				8F9141AA2219C3390064EA74 /* Info.plist */,
-				8F489890221DF57800C13BBF /* PatientCellTableViewCell.swift */,
 			);
 			path = FHIRdataTableViewer;
 			sourceTree = "<group>";
@@ -287,15 +299,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FB1C31822B6875C00986DB1 /* ConditionsViewController.swift in Sources */,
+				8F006F2723CB8F960030EEAF /* PatientStructs.swift in Sources */,
 				8F9141A12219C3370064EA74 /* ViewController.swift in Sources */,
 				8F489891221DF57800C13BBF /* PatientCellTableViewCell.swift in Sources */,
+				8F2F881123DE2C70002F903E /* CarePlanStructs.swift in Sources */,
 				8F422B1E2263AE17000D5E20 /* CarePlanTableViewCell.swift in Sources */,
+				8F0751B523D4F53B00D59F20 /* ObservationStructs.swift in Sources */,
 				8F9141B12219CBE80064EA74 /* PatientTableViewController.swift in Sources */,
 				8F753F882224D71E00B676BD /* ObservationViewController.swift in Sources */,
 				8FB7C1C922C4DFA00064AAE5 /* ConditionsTableViewCell.swift in Sources */,
 				8F3EA6D92262413A00459FFE /* CarePlanViewController.swift in Sources */,
 				8F044B8E2260B4CD00462F1A /* TabBarViewController.swift in Sources */,
 				8FA138A92232F526009F37F7 /* ObservationTableViewCell.swift in Sources */,
+				8F2F880F23DE2965002F903E /* ConditionStructs.swift in Sources */,
 				8F91419F2219C3370064EA74 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
