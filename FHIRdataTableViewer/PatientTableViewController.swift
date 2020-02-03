@@ -57,6 +57,10 @@ class PatientTableViewController: UITableViewController {
         // load data
         loadPatientData()
         //print("The count in viewDidLoad \(self.patients.count)")
+        //sort patients by family name or full name
+//        patients.sort {
+//            $0.family < $1.family
+//        }
         
     }
     
@@ -119,6 +123,9 @@ class PatientTableViewController: UITableViewController {
                 }
                 let queue = OperationQueue.main
                 queue.addOperation {
+                    self.patients.sort {
+                        $0.family < $1.family
+                    }
                     self.tableView.reloadData()
                 }
             } catch {
